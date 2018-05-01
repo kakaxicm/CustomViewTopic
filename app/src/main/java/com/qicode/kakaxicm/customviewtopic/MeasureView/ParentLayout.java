@@ -1,4 +1,4 @@
-package com.qicode.kakaxicm.customviewtopic.DisaptchDemo;
+package com.qicode.kakaxicm.customviewtopic.MeasureView;
 
 import android.content.Context;
 import android.support.annotation.Nullable;
