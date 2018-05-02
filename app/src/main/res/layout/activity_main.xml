@@ -19,4 +19,17 @@
         android:onClick="gotoMeasure"
         tools:ignore="OnClick" />
 
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="4dp"
+        android:text="FlowLayout"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:onClick="gotoFlowLayout"
+        tools:ignore="OnClick" />
+
+
 </LinearLayout>

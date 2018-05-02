@@ -16,7 +16,8 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name="com.qicode.kakaxicm.customviewtopic.activity.ViewMeasureActivity"/>
+        <activity android:name="com.qicode.kakaxicm.customviewtopic.activity.ViewMeasureActivity" />
+        <activity android:name="com.qicode.kakaxicm.customviewtopic.activity.FlowLayoutActivity" />
     </application>
 
 </manifest>

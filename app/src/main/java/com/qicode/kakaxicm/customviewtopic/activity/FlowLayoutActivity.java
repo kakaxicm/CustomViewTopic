@@ -1,45 +1,39 @@
-package com.qicode.kakaxicm.customviewtopic;
+package com.qicode.kakaxicm.customviewtopic.activity;
 
+import android.app.Activity;
 import android.content.Intent;
 import android.graphics.Color;
-import android.support.v4.content.ContextCompat;
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
-import android.util.Log;
-import android.view.MotionEvent;
+import android.support.annotation.Nullable;
 import android.view.View;
 import android.widget.TextView;
 
 import com.qicode.kakaxicm.customviewtopic.CustomWidget.FlowLayout;
+import com.qicode.kakaxicm.customviewtopic.R;
 import com.qicode.kakaxicm.customviewtopic.SizeUtils.SizeUtils;
-import com.qicode.kakaxicm.customviewtopic.activity.FlowLayoutActivity;
-import com.qicode.kakaxicm.customviewtopic.activity.ViewMeasureActivity;
 
-public class MainActivity extends AppCompatActivity {
+/**
+ * Created by chenming on 2018/5/2
+ */
+public class FlowLayoutActivity extends Activity {
+
+    private String[] MALE_NAMES = {"Adam", "Alan","Brian", "Edward", "Alex", "Steven","Tom","Wesley", "Sam", "Robinson", "Robert", "Philip", "Larry", "Kevin"};
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
-    }
-    /*
-     * View的Measure原理
-     */
-    public void gotoMeasure(View v){
-        Intent i = new Intent(this, ViewMeasureActivity.class);
-        startActivity(i);
+        setContentView(R.layout.activity_flowlayout);
+
+        FlowLayout fl = findViewById(R.id.fl);
+        for (int i = 0; i < MALE_NAMES.length; i++) {
+            String name = MALE_NAMES[i];
+
+            TextView maleNameTv = createTextView(name);
+            maleNameTv.setTag(i);
+            fl.addView(maleNameTv);
+        }
 
     }
-
-    /*
-     * FlowLayout
-     */
-    public void gotoFlowLayout(View v){
-        Intent i = new Intent(this, FlowLayoutActivity.class);
-        startActivity(i);
-
-    }
-
 
     /**
      * 动态生成TextView
